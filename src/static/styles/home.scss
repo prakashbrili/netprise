@@ -1,0 +1,290 @@
+@import "main";
+.home_wrapper{
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.home_content{
+  align-items: center;
+  text-align: center;
+  h2{
+    margin:  0;
+    padding: 0 0 10px;
+  }
+}
+
+.line{
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 2px solid #dedede;
+}
+.line_out{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  align-items: center;
+  font-size: 14px;
+  span{
+    background-color: #f2f2f2;
+    position: relative;
+    padding: 0 10px;
+  }
+  &:before{
+    content: '';
+    height: 3px;
+    width: 80%;
+    position: absolute;
+    background-color: #ffffff;
+    border-top: 2px solid #dedede;
+    top: 50%;
+    left: 10%;
+  }
+}
+
+.menu_sorting{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  ul{
+    width: 100%;
+    li{
+      float: right;
+      margin-right: 10px;
+      &:first-child{
+        float: left;
+        margin-left: 0;
+      }
+      .fa{
+        font-size: 20px;
+      }
+      a{
+        
+      }
+    }
+  }
+  a.sortButton{
+    width: 150px;
+    background-color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 6px 14px;
+    margin-left: 11px;
+  }
+  span{
+
+  }
+}
+
+.product_container{
+  clear: both;
+  flex: 1;
+  .product{
+    ul{
+      
+    }
+    li{
+      width: 33%;
+      float: left;
+      margin-bottom: 10px;
+      padding: 0 3px;
+      position: relative;
+      @media only screen and (max-width: 760px) {
+        width: 50%;
+      }
+      @media only screen and (max-width: 400px) {
+        width: 100%;
+      }
+      .prods{
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 4px;
+        position: relative;
+      }
+      span.prod_id{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: $secondary-color;
+        font-size: 13px;
+      }
+      div{
+
+      }
+      .prod_image_container{
+        width: 100%;
+        height: 130px;
+        background-color: #e9e9e9;
+        margin-bottom: 5px;
+        overflow: hidden;
+        img{
+          width: 100px;
+          height: 100%;
+          display: table;
+          margin: 0 auto;
+        }
+      }
+      .prod_details{
+        p{
+          margin: 0;
+        }
+        .addtocart{
+
+        }
+        .addedtocart{
+          background-color: $primary-color;
+          &:hover{
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.column_main{
+  width: 70%;
+  float: left;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+  }
+}
+.column_side{
+  float: right;
+  margin-top: 70px;
+  padding:  0 10px;
+  width: 30%;
+  padding-bottom: 30px;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+.checkoutoverlay{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  z-index:999;
+  .selected_prod{
+    margin-top: 20px;
+    clear: both;
+  }
+  .checkoutContainer{
+      background-color: #f2f2f2;
+      padding: 20px;
+      min-height: 300px;
+  }
+  p{
+    margin: 0;
+  }
+  .line{
+    clear: both;
+  }
+  .checkoutContent{
+    .edit_button{
+      float: right;
+    }
+
+  }
+}
+
+.checkout_final{
+  li{
+    clear: both;
+    //background-color: #f2f2f2;
+    font-size: 18px;
+     >div{
+       float: right;
+     }
+    > div:first-child{
+      float: left;
+    }
+  }
+}
+
+.add_cart{
+  //background-color: #dedede;
+  width: 100%;
+  float: none;
+}
+.selected_prod{
+  clear: both;
+  display: block;
+  margin-top: 15px;
+}
+/*
+
+.discount_name{
+  padding-left: 0px;
+  @media only screen and (max-width: 760px) {
+    padding: 0 5px;
+    clear: both;
+  }
+}*/
+
+.popup_main{
+  width: 70%;
+  float: left;
+  padding: 10px 10px;
+  @media only screen and (max-width: 760px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+  }
+  nav{
+    ul{
+      li{
+        float: none;
+        width: 100%;
+        margin: 5px 0;
+      }
+      .add_cart{
+        background-color: #dedede;
+        padding: 10px 10px;
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+}
+.popup_side{
+  width: 30%;
+  float: right;
+  padding: 10px 10px;
+  @media only screen and (max-width: 760px) {
+    width: 50%;
+
+  }
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+  }
+  nav{
+    ul{
+      li{
+        float: none;
+        margin-bottom: 10px;
+        .imagecheckout{
+          width: 50px;
+          height: 50px;
+          background-color: #f3f3f3;
+        }
+        .pro_det{
+          padding: 0 10px;
+        }
+        ul{
+          li{
+
+          }
+        }
+      }
+    }
+  }
+}
